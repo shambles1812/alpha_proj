@@ -16,11 +16,11 @@ direction = point_direction(x,y,obj_player1.x,obj_player1.y);
 
 
 if (playerState == "normal") {
-	speed = 24;
+	speed = movementSpeed;
 }
 
 if (playerState == "slowed") {
-	speed = 12;
+	speed = movementSpeed/2;
 }
 
 // depth sorting

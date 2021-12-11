@@ -12,7 +12,7 @@ if (invulCounter <= 0) {
 	
 	// shield damage
 	if (shieldPoints != 0) {
-		shieldPoints -= obj_enemy1.damage;
+		shieldPoints -= obj_enemy1.attackDamage;
 	}
 	
 	// shield invul
