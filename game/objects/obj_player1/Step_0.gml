@@ -120,21 +120,22 @@ switch (playerState) {
 	break;
 }
 
-// gun cooldown cant be negative
-if (gunCounter < 0) {
-	gunCounter = 0;
+// gun cooldown cant be more than max
+if (gunCounter > gunValue) {
+	gunCounter = gunValue;
 }
 
 // gun shot and cooldown
-if (gunCounter != 0) {
-	gunCounter -= attackSpeed;
+if (gunCounter != gunValue) {
+	gunCounter += attackSpeed;
 }
 
-if (gunCounter == 0 && mouse_check_button(mb_left)) {
-	gunCounter = gunValue;
+if (gunCounter == gunValue && mouse_check_button(mb_left)) {
+	gunCounter = 0;
 	with (instance_create_layer(x,y,"bullets",obj_bullet)) {
 		direction = point_direction(obj_player1.x,obj_player1.y,mouse_x,mouse_y);
 		speed = obj_player1.bulletSpeed;
+		damage = obj_player1.attackDamage
 	}
 }
 
