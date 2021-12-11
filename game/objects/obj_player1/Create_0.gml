@@ -30,6 +30,7 @@ invulCounter = 0;
 invulShieldValue = 1200;
 
 // gun cooldown
+attackDamage = 5;
 bulletSpeed = 50;
 attackSpeed = 15;
 gunValue = 600;

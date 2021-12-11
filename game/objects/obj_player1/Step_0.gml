@@ -135,6 +135,7 @@ if (gunCounter == gunValue && mouse_check_button(mb_left)) {
 	with (instance_create_layer(x,y,"bullets",obj_bullet)) {
 		direction = point_direction(obj_player1.x,obj_player1.y,mouse_x,mouse_y);
 		speed = obj_player1.bulletSpeed;
+		damage = obj_player1.attackDamage
 	}
 }
 
