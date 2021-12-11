@@ -3,5 +3,3 @@
 
 // variable
 playerState = "normal";
-
-damage = 3;
